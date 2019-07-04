@@ -11,11 +11,13 @@
     <tr>
         <th>First name</th>
         <th>Last name</th>
+        <th>Edit</th>
     </tr>
     <th:block th:each="customer : ${customers}">
         <tr>
             <td th:text="${customer.firstName}"></td>
             <td th:text="${customer.lastName}"></td>
+            <td><a th:href="@{/edit-customer/__${customer.id}__ }">Edit</a></td>
         </tr>
     </th:block>
 </table>
